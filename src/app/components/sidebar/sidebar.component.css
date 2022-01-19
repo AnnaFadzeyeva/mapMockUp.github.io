@@ -7,9 +7,26 @@
     height: 100vh;
     padding: 50px;
     padding-top: 100px;
+    padding-right: 0px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)  ; 
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)  ; 
 	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)  ; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box-sidebar-left{
+    width: 400px;
+    margin-right: 20px;
+}
+
+.box_sidebar_arrow{
+    border-left: 2px solid #e9eaec;
+    justify-content: center;
+    height: 25%;
+    margin: auto 0%;
+    width: 27px;
 }
 
 .h-sidebar{
@@ -45,7 +62,25 @@
     padding-left: 28px;
     display: flex;
     flex-direction: row;
+    justify-content: left;    
+}
+
+
+.box-text-parameter{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;    
+}
+
+.boxParameterTextChange{
+    width: 70px;
+}
+
+.parameterTextChange{
+    text-align: center;
+    color: #2d3447;
+    border-bottom: 2px solid #a6aab2;
+    padding-bottom: 5px;
 }
 
 .options-parameter button{
@@ -53,19 +88,25 @@
     cursor: pointer;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-right: 10px;
     padding: 7px;
     padding-left: 15px;
     padding-right: 15px;
     background-color: #a6aab2;
     border-radius: 3px;
     color: #ffffff;
+    font-size: 0.8em;
 }
 
 .options-parameter button:hover{
     background-color: #2d3447;
 }
 
-.options-parameter button:active{
+.gray{
+    background-color: #a6aab2;
+}
+
+.dark-blue{
     background-color: #2d3447;
 }
 
@@ -137,3 +178,16 @@ input[type="checkbox"]:not(:checked) + label:after{
 input[type="checkbox"]:checked + label:after{
     opacity: 1;
 }
+
+
+
+
+.mat-button-toggle{
+    background-color: #ebebeb;
+    border-left: 1px solid #ffffff;
+}
+
+.mat-button-toggle-checked{
+    background-color: #2979FF;
+    color: white;
+  } 

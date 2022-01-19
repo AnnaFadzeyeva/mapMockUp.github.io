@@ -1,57 +1,173 @@
 <div class="sidebar">
-    <div>
-        <p class="h-sidebar">
-            Meteorologische Parameter als Zeitserie
-        </p>
-    </div>
+    <div class="box-sidebar-left">
 
-    <hr>
-
-    <div class="parameter">
-
-        <div class="text-parameter">
-            <input type="checkbox" id="cb1"> 
-            <label for="cb1" class="h-parameter">Windgeschwindigkeit</label>
-            <div class="p-parameter">Höhenwind</div>
+        <div>
+            <p class="h-sidebar">
+                Meteorologische Parameter als Zeitserie
+            </p>
         </div>
 
-        <div class="box-options-parameter">
-            <div class="options-parameter">
-                <button class="button-option-parameter">m/s</button>
-                <button class="button-option-parameter">km/h</button>
-                <button class="button-option-parameter">Beaufort</button>
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb1">
+                    <label for="cb1" class="h-parameter">Windgeschwindigkeit</label>
+                    <div class="p-parameter">Höhenwind</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <p class="parameterTextChange">{{addObjectParameter}}</p>
+                </div>
             </div>
+            <div class="box-options-parameter">
+                <div class="options-parameter">
+                    <button class="button-option-parameter" (click)="onClickAddObjectMS()">m/s</button>
+                    <button class="button-option-parameter" (click)="onClickAddObjectKMH()">km/h</button>
+                    <button class="button-option-parameter" (click)="onClickAddObjectBeafort()">Beaufort</button>
+                </div>
+            </div>
+
         </div>
 
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb2">
+                    <label for="cb2" class="h-parameter">Druck auf Meereshöhe</label>
+                    <div class="p-parameter">Auf Meersehöhe reduzierter Druck</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <p class="parameterTextChange">{{addObjectParameter2}}</p>
+                </div>
+            </div>
+            <div class="box-options-parameter">
+                <div class="options-parameter">
+                    <button class="button-option-parameter" (click)="onClickAddObjectHPA()">hPa</button>
+                    <button class="button-option-parameter" (click)="onClickAddObjectPA()">Pa</button>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb3">
+                    <label for="cb3" class="h-parameter">T_M2</label>
+                    <div class="p-parameter">Temperatur in 2m über Grund</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <p class="parameterTextChange">{{addObjectParameter3}}</p>
+                </div>
+            </div>
+            <div class="box-options-parameter">
+                <div class="options-parameter">
+                    <button class="button-option-parameter" (click)="onClickAddObjectC()">°C</button>
+                    <button class="button-option-parameter" (click)="onClickAddObjectK()">K</button>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb4">
+                    <label for="cb4" class="h-parameter">RELHUM</label>
+                    <div class="p-parameter">Relative Feuchte in 2m über Grund</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <p class="parameterTextChange">%</p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb5">
+                    <label for="cb5" class="h-parameter">CLCT</label>
+                    <div class="p-parameter">Gesamtbedeckung</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <p class="parameterTextChange">%</p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb6">
+                    <label for="cb6" class="h-parameter">TOT_PREC</label>
+                    <div class="p-parameter">Stündlicher Niederschlag</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <p class="parameterTextChange">{{addObjectParameter6}}</p>
+                </div>
+            </div>
+            <div class="box-options-parameter">
+                <div class="options-parameter">
+                    <button class="button-option-parameter" (click)="onClickAddObjectMM()">mm</button>
+                    <button class="button-option-parameter" (click)="onClickAddObjectHR()">hr</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <hr>
+
+        <div class="parameter">
+            <div class="box-text-parameter">
+                <div class="text-parameter">
+                    <input type="checkbox" id="cb7">
+                    <label for="cb7" class="h-parameter">TOT_PREC</label>
+                    <div class="p-parameter">Stündlicher Niederschlag</div>
+                </div>
+                <div class="boxParameterTextChange">
+                    <span class="parameterTextChange">{{group.value}}</span>
+                </div>
+            </div>
+            <div class="box-options-parameter">
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group="matButtonToggleGroup">
+                    <mat-button-toggle value="m/s" style="border-left: none;">m/s</mat-button-toggle>
+                    <mat-button-toggle value="km/h">km/h</mat-button-toggle>
+                    <mat-button-toggle value="Beaufort">Beaufort</mat-button-toggle>
+                  </mat-button-toggle-group>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <hr>
     </div>
 
-    <hr>
-
-    <div class="parameter">
-
-        <div class="text-parameter">
-            <input type="checkbox" id="cb2"> <label for="cb2" class="h-parameter">Druck auf Meereshöhe</label>
-            <div class="p-parameter">Auf Meersehöhe reduzierter Druck</div>
+    <div class="box_sidebar_arrow">
+        <div>
+            <img src="/src/assets/img/icon/arrow.png" alt="" class="img-arrow-sidebar">
         </div>
-        <div class="options-parameter">
-
-        </div>
-
     </div>
-
-
-    <div class="parameter">
-
-        <div class="text-parameter">
-            <input type="checkbox" id="cb3"> <label for="cb3" class="h-parameter">T_M2</label>
-            <div class="p-parameter">Temperatur in 2m über Grund</div>
-        </div>
-        <div class="options-parameter">
-
-        </div>
-
-    </div>
-
-
-
 </div>
