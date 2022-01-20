@@ -8,45 +8,40 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
 
-  addObjectParameter = '';
-  addObjectParameter2 = '';
-  addObjectParameter3 = '';
-  addObjectParameter6 = '';
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClickAddObjectMS(){
-    this.addObjectParameter = "m/s";
+  // show on click hide default = show
+
+  isShow1 = false;
+  isShow2 = false;
+  isShow3 = false;
+  isShow4 = false;
+
+  isShow6 = false;
+
+  toggleDisplay1() {
+    this.isShow1 = !this.isShow1;
   }
-  onClickAddObjectKMH(){
-    this.addObjectParameter = "km/h";
-  }
-  onClickAddObjectBeafort(){
-    this.addObjectParameter = "Beafort";
+  
+  toggleDisplay2() {
+    this.isShow2 = !this.isShow2;
   }
 
-  onClickAddObjectHPA(){
-    this.addObjectParameter2 = "hPa";
-  }
-  onClickAddObjectPA(){
-    this.addObjectParameter2 = "Pa";
+  toggleDisplay3() {
+    this.isShow3 = !this.isShow3;
   }
 
-  onClickAddObjectC(){
-    this.addObjectParameter3 = "°C";
-  }
-  onClickAddObjectK(){
-    this.addObjectParameter3 = "K";
+  toggleDisplay4() {
+    this.isShow4 = !this.isShow4;
   }
 
-  onClickAddObjectMM(){
-    this.addObjectParameter6 = "mm";
+  
+  toggleDisplay6() {
+    this.isShow6 = !this.isShow6;
   }
-  onClickAddObjectHR(){
-    this.addObjectParameter6 = "hr";
-  }
+
 
 }

@@ -1,4 +1,5 @@
-app-map{
+.site-position{
+    position: relative;
     display: flex;
     flex-direction: row;
 }

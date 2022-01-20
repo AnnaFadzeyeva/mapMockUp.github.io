@@ -1,4 +1,5 @@
 <div class="sidebar">
+
     <div class="box-sidebar-left">
 
         <div>
@@ -8,153 +9,163 @@
         </div>
 
         <hr>
+        <br>
 
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb1">
-                    <label for="cb1" class="h-parameter">Windgeschwindigkeit</label>
-                    <div class="p-parameter">Höhenwind</div>
-                </div>
-                <div class="boxParameterTextChange">
-                    <p class="parameterTextChange">{{addObjectParameter}}</p>
-                </div>
-            </div>
-            <div class="box-options-parameter">
-                <div class="options-parameter">
-                    <button class="button-option-parameter" (click)="onClickAddObjectMS()">m/s</button>
-                    <button class="button-option-parameter" (click)="onClickAddObjectKMH()">km/h</button>
-                    <button class="button-option-parameter" (click)="onClickAddObjectBeafort()">Beaufort</button>
-                </div>
-            </div>
+        <div class="boxData">
+            <span class="datum-zeitspanne">
+                <mat-form-field appearance="fill">
+                    <mat-label>Zeitspanne</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate placeholder="Anfang">
+                        <input matEndDate placeholder="Ende">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </span>
+
+            <button mat-flat-button color="primary">Bestätigen</button>
 
         </div>
 
-        <hr>
-
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb2">
-                    <label for="cb2" class="h-parameter">Druck auf Meereshöhe</label>
-                    <div class="p-parameter">Auf Meersehöhe reduzierter Druck</div>
-                </div>
-                <div class="boxParameterTextChange">
-                    <p class="parameterTextChange">{{addObjectParameter2}}</p>
-                </div>
+        <div class="boxDemo">
+            <div>
+                <p class="p-boxDemo">
+                    Alle Daten aus Januar 1995 werden kostenfrei und instant als Demo zur Verfügung gestellt.
+                </p>
             </div>
-            <div class="box-options-parameter">
-                <div class="options-parameter">
-                    <button class="button-option-parameter" (click)="onClickAddObjectHPA()">hPa</button>
-                    <button class="button-option-parameter" (click)="onClickAddObjectPA()">Pa</button>
-                </div>
+            <div class="button-demodaten">
+                <button mat-stroked-button color="primary">Demodaten anschauen</button>
             </div>
-
-        </div>
-
-        <hr>
-
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb3">
-                    <label for="cb3" class="h-parameter">T_M2</label>
-                    <div class="p-parameter">Temperatur in 2m über Grund</div>
-                </div>
-                <div class="boxParameterTextChange">
-                    <p class="parameterTextChange">{{addObjectParameter3}}</p>
-                </div>
-            </div>
-            <div class="box-options-parameter">
-                <div class="options-parameter">
-                    <button class="button-option-parameter" (click)="onClickAddObjectC()">°C</button>
-                    <button class="button-option-parameter" (click)="onClickAddObjectK()">K</button>
-                </div>
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb4">
-                    <label for="cb4" class="h-parameter">RELHUM</label>
-                    <div class="p-parameter">Relative Feuchte in 2m über Grund</div>
-                </div>
-                <div class="boxParameterTextChange">
-                    <p class="parameterTextChange">%</p>
-                </div>
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb5">
-                    <label for="cb5" class="h-parameter">CLCT</label>
-                    <div class="p-parameter">Gesamtbedeckung</div>
-                </div>
-                <div class="boxParameterTextChange">
-                    <p class="parameterTextChange">%</p>
-                </div>
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb6">
-                    <label for="cb6" class="h-parameter">TOT_PREC</label>
-                    <div class="p-parameter">Stündlicher Niederschlag</div>
-                </div>
-                <div class="boxParameterTextChange">
-                    <p class="parameterTextChange">{{addObjectParameter6}}</p>
-                </div>
-            </div>
-            <div class="box-options-parameter">
-                <div class="options-parameter">
-                    <button class="button-option-parameter" (click)="onClickAddObjectMM()">mm</button>
-                    <button class="button-option-parameter" (click)="onClickAddObjectHR()">hr</button>
-                </div>
-            </div>
-
         </div>
 
 
 
+        <!---->
 
+        <div class="box-parameter">
+            <div class="parameter">
 
-
-
-        <hr>
-
-        <div class="parameter">
-            <div class="box-text-parameter">
-                <div class="text-parameter">
-                    <input type="checkbox" id="cb7">
-                    <label for="cb7" class="h-parameter">TOT_PREC</label>
-                    <div class="p-parameter">Stündlicher Niederschlag</div>
+                <div class="box-text-parameter">
+                    <div class="text-parameter, h-parameter">
+                        <mat-checkbox class="mat-checkbox-option" (click) = toggleDisplay1()>Windgeschwindigkeit</mat-checkbox>
+                        <div class="p-parameter">Höhenwind</div>
+                    </div>
+                    <span class="boxParameterTextChange">
+                        <span class="parameterTextChange"
+                        [ngClass]="group1.value ? 'parameterTextChange_on' : 'parameterTextChange_off'">{{group1.value}}</span>
+                    </span>
                 </div>
-                <div class="boxParameterTextChange">
-                    <span class="parameterTextChange">{{group.value}}</span>
+                <div class="box-options-parameter" [hidden] = "!isShow1">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group1="matButtonToggleGroup" (click) = toggleDisplay1()>
+                        <mat-button-toggle value="m/s" style="border-left: none;" >m/s</mat-button-toggle>
+                        <mat-button-toggle value="km/h">km/h</mat-button-toggle>
+                        <mat-button-toggle value="Beaufort">Beaufort</mat-button-toggle>
+                    </mat-button-toggle-group>
                 </div>
-            </div>
-            <div class="box-options-parameter">
-                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group="matButtonToggleGroup">
-                    <mat-button-toggle value="m/s" style="border-left: none;">m/s</mat-button-toggle>
-                    <mat-button-toggle value="km/h">km/h</mat-button-toggle>
-                    <mat-button-toggle value="Beaufort">Beaufort</mat-button-toggle>
-                  </mat-button-toggle-group>
+
             </div>
 
+
+            <hr>
+
+            <div class="parameter">
+                <div class="box-text-parameter">
+                    <div class="text-parameter">
+                        <mat-checkbox class="example-margin"  (click) = toggleDisplay2()>Druck auf Meereshöhe</mat-checkbox>
+                        <div class="p-parameter">Auf Meereshöhe reduzierter Druck</div>
+                    </div>
+                    <span class="boxParameterTextChange">
+                        <span class="parameterTextChange"
+                            [ngClass]="group2.value ? 'parameterTextChange_on' : 'parameterTextChange_off'">{{group2.value}}</span>
+                    </span>
+                </div>
+                <div class="box-options-parameter" [hidden] = "!isShow2">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group2="matButtonToggleGroup" (click) = toggleDisplay2()>
+                        <mat-button-toggle value="hPa" style="border-left: none;">hPa</mat-button-toggle>
+                        <mat-button-toggle value="Pa">Pa</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="parameter">
+                <div class="box-text-parameter">
+                    <div class="text-parameter">
+                        <mat-checkbox class="example-margin" (click) = toggleDisplay3()>T_M2</mat-checkbox>
+                        <div class="p-parameter">Temperatur in 2m über Grund</div>
+                    </div>
+                    <span class="boxParameterTextChange">
+                        <span class="parameterTextChange"
+                            [ngClass]="group3.value ? 'parameterTextChange_on' : 'parameterTextChange_off'">{{group3.value}}</span>
+                    </span>
+                </div>
+                <div class="box-options-parameter" [hidden] = "!isShow3">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group3="matButtonToggleGroup" (click) = toggleDisplay3()>
+                        <mat-button-toggle value="°C" style="border-left: none;">°C</mat-button-toggle>
+                        <mat-button-toggle value="K">K</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+
+            </div>
+
+
+
+            <hr>
+
+            <div class="parameter">
+                <div class="box-text-parameter">
+                    <div class="text-parameter">
+                        <mat-checkbox class="example-margin">RELHUM</mat-checkbox>
+                        <div class="p-parameter">Relative Feuchte in 2m über Grund</div>
+                    </div>
+                    <span class="boxParameterTextChange">
+                        <span class="parameterTextChange">%</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="parameter">
+                <div class="box-text-parameter">
+                    <div class="text-parameter">
+                        <mat-checkbox class="example-margin">CLCT</mat-checkbox>
+                        <div class="p-parameter">Gesamtbedeckung</div>
+                    </div>
+                    <span class="boxParameterTextChange">
+                        <span class="parameterTextChange">%</span>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="parameter">
+                <div class="box-text-parameter">
+                    <div class="text-parameter">
+                        <mat-checkbox class="example-margin" (click) = toggleDisplay6()>TOT_PREC</mat-checkbox>
+                        <div class="p-parameter">Stündlicher Niederschlag</div>
+                    </div>
+                    <span class="boxParameterTextChange">
+                        <span class="parameterTextChange"
+                            [ngClass]="group7.value ? 'parameterTextChange_on' : 'parameterTextChange_off'">{{group7.value}}</span>
+                    </span>
+                </div>
+                <div class="box-options-parameter" [hidden] = "!isShow6">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group7="matButtonToggleGroup" (click) = toggleDisplay6()>
+                        <mat-button-toggle value="mm" style="border-left: none;">mm</mat-button-toggle>
+                        <mat-button-toggle value="hr">hr</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+
+            </div>
         </div>
 
 
