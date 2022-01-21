@@ -25,6 +25,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -32,6 +35,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     AppComponent,
     MapComponent,
     SidebarComponent,
+    SidenavComponent,
     
   ],
   imports: [
@@ -51,7 +55,9 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    ScrollingModule
+    ScrollingModule,
+    MatStepperModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
