@@ -17,7 +17,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
 import {MatButtonModule} from '@angular/material/button';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -32,7 +32,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     AppComponent,
     MapComponent,
     SidebarComponent,
-    SidenavComponent
+    
   ],
   imports: [
     BrowserModule,

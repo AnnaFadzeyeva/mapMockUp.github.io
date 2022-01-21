@@ -186,11 +186,16 @@
 
                 </div>
                 <div class="box-options-format-parameter">
-                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group8="matButtonToggleGroup"
-                        (click)=toggleDisplay8()>
-                        <mat-button-toggle value="svg" style="border-left: none;">svg</mat-button-toggle>
-                        <mat-button-toggle value="csv">csv</mat-button-toggle>
-                    </mat-button-toggle-group>
+                    <div>
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group8="matButtonToggleGroup"
+                            (click)=toggleDisplay8()>
+                            <mat-button-toggle value="svg" style="border-left: none;">svg</mat-button-toggle>
+                            <mat-button-toggle value="csv">csv</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                    <div class="box-button-data-download">
+                        <button class="button-data-confirm" mat-flat-button color="primary">In den Warenkorb</button>
+                    </div>
                 </div>
             </div>
 
@@ -209,15 +214,17 @@
                         </div>
                         <span class="boxParameterTextChange">
                             <span class="parameterTextChange"
-                                [ngClass]="group11.value ? 'parameterTextChange_on' : 'parameterTextChange_off'">{{group11.value}}</span>
+                                [ngClass]="group11.value ? 'parameterAdditionalFormatChange_on_on' : 'parameterAdditionalFormatChange_off'">{{group11.value}}</span>
                         </span>
                     </div>
-                    <div class="box-options-parameter" [hidden]="!isShow11">
-                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group11="matButtonToggleGroup"
-                            (click)=toggleDisplay11()>
+                    <div class="box-options-format-parameter" [hidden]="!isShow11">
+
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style"
+                            #group11="matButtonToggleGroup" (click)=toggleDisplay11()>
                             <mat-button-toggle value="svg" style="border-left: none;">svg</mat-button-toggle>
                             <mat-button-toggle value="csv">csv</mat-button-toggle>
                         </mat-button-toggle-group>
+
                     </div>
                 </div>
 
@@ -232,14 +239,19 @@
                                 [ngClass]="group12.value ? 'parameterTextChange_on' : 'parameterTextChange_off'">{{group12.value}}</span>
                         </span>
                     </div>
-                    <div class="box-options-parameter" [hidden]="!isShow12">
-                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" #group12="matButtonToggleGroup"
-                            (click)=toggleDisplay12()>
+                    <div class="box-options-format-parameter" [hidden]="!isShow12">
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style"
+                            #group12="matButtonToggleGroup" (click)=toggleDisplay12()>
                             <mat-button-toggle value="svg" style="border-left: none;">svg</mat-button-toggle>
                             <mat-button-toggle value="csv">csv</mat-button-toggle>
                         </mat-button-toggle-group>
                     </div>
                 </div>
+
+                <div class="box-button-data-download">
+                    <button class="button-data-confirm" mat-flat-button color="primary">In Warenkorb</button>
+                </div>
+
 
 
             </div>
