@@ -19,8 +19,13 @@ export class SidebarComponent implements OnInit {
   isShow2 = false;
   isShow3 = false;
   isShow4 = false;
-
+  isShow5 = false;
   isShow6 = false;
+  isShow7 = false;
+  isShow8 = false;
+
+  isShow11 = false;
+  isShow12 = false;
 
   toggleDisplay1() {
     this.isShow1 = !this.isShow1;
@@ -38,10 +43,28 @@ export class SidebarComponent implements OnInit {
     this.isShow4 = !this.isShow4;
   }
 
-  
+  toggleDisplay5() {
+    this.isShow5 = !this.isShow5;
+  }
+
   toggleDisplay6() {
     this.isShow6 = !this.isShow6;
   }
+  
+  toggleDisplay7() {
+    this.isShow7 = !this.isShow7;
+  }
 
+  toggleDisplay8() {
+    this.isShow8 = !this.isShow8;
+  }
+
+  toggleDisplay11() {
+    this.isShow11 = !this.isShow11;
+  }
+
+  toggleDisplay12() {
+    this.isShow12 = !this.isShow12;
+  }
 
 }
