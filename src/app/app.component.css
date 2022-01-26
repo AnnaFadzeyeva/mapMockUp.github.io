@@ -1,5 +1,37 @@
+
+
 .site-position{
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
 }
+
+.app-menu{
+
+    width: 100vw;
+
+}
+
+
+.app-content-products{
+    overflow-y: visible;
+}
+
+app-footer{
+    position: relative;
+    z-index: 110002;
+}
+
+mat-toolbar{
+    position: static;
+    width: 100vw;
+}
+
+mat-grid-tile{
+    border: 2px solid #ffffff;
+}
+
+mat-grid-tile {
+    background: lightblue;
+  }

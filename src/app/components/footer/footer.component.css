@@ -1,0 +1,14 @@
+.box-footer{
+    background-color: rgb(42, 43, 44);
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box-footer-contact{
+    color: white;
+    padding: 20px;
+    padding-top: 35px;
+}

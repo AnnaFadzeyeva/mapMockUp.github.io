@@ -1,0 +1,107 @@
+.menu-box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 70px;
+    justify-content: space-between;
+    background-color: #ffffff;
+
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07)  ; 
+    -webkit-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07)  ; 
+    -moz-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07)  ; 
+}
+
+
+
+
+.menu-box-left{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    vertical-align: middle;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.logo-box{
+    position: relative;
+    width: 40px;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.p-box-logo{
+    position: relative;
+    margin: 0% auto;
+    top: 5px;
+}
+
+.p-logo{
+  font-size: 2em;
+}
+
+.menu-box-center{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-box-right{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box-search-bar{
+    position: relative;
+    margin: 0px 20px;
+    width: 300px;
+}
+  
+  /* search bar */
+
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 1em;
+    border: 0.2px solid rgb(181, 187, 194);
+    float: left;
+    width: 85%;
+    background: #f1f1f1;
+    border-radius: 2px 0px 0px 2px;
+  }
+  
+  /* submit button */
+  form.example button {
+    border-style: none;
+    float: left;
+    width: 15%;
+    padding: 10px;
+    background-image: linear-gradient(to right top, #101d32, #192436, #212b3a, #2a323d, #333941);
+    color: white;
+    font-size: 1em;
+    border: 0.2px solid #252729;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 0px 2px 2px 0px;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
